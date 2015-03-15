@@ -91,15 +91,15 @@ public class ApplicationTest {
     FileUtils.deleteDirectory(new File(rootDirectory));
     new File(rootDirectory).mkdir();
 
-    String dirA = rootDirectory + "/A";
-    String fileA1 = dirA + "/file1.txt";
-    String fileA2 = dirA + "/file2.txt";
-    String dirB = rootDirectory + "/A/B";
-    String dirC = rootDirectory + "/A/C";
-    String fileC1 = dirC + "/file1.txt";
-    String dirD = rootDirectory + "/A/C/D";
-    String fileD1 = dirD + "/file1.txt";
-    String fileD2 = dirD + "/file2.txt";
+    String dirA = rootDirectory + "\\A";
+    String fileA1 = dirA + "\\file1.txt";
+    String fileA2 = dirA + "\\file2.txt";
+    String dirB = rootDirectory + "\\A\\B";
+    String dirC = rootDirectory + "\\A\\C";
+    String fileC1 = dirC + "\\file1.txt";
+    String dirD = rootDirectory + "\\A\\C\\D";
+    String fileD1 = dirD + "\\file1.txt";
+    String fileD2 = dirD + "\\file2.txt";
     new File(dirA).mkdirs();
     new File(dirB).mkdirs();
     new File(dirC).mkdirs();
@@ -135,6 +135,10 @@ public class ApplicationTest {
     sb.append("\n");
     sb.append(fileD2);
     sb.append("\n");
+    System.out.println("Attendu");
+    System.out.println(sb);
+    System.out.println("Obtenu");
+    System.out.println(output);
     assertEquals(sb.toString(), output);
   }
   
